@@ -1,0 +1,5 @@
+package com.flavorstack.app;
+
+public class BaseRestController {
+
+}
