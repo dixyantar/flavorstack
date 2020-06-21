@@ -10,7 +10,7 @@ steps:
    args:
    - 'run'
    - 'deploy'
-   - '[SERVICE-NAME]'
+   - 'flavorstack-docker-service'
    - '--image'
    - 'gcr.io/$PROJECT_ID/flavorstack-docker-service:$COMMIT_SHA'
    - '--region'
