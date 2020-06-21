@@ -11,7 +11,7 @@ public class BaseRestController {
 	
 	@GetMapping("/get")
 	public ResponseEntity<String> get(){
-		String resp = "Auto Build Success";
+		String resp = "Docker Test";
 		return new ResponseEntity<>(resp,HttpStatus.OK);
 	}
 }

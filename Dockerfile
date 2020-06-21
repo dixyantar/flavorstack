@@ -4,7 +4,7 @@ FROM maven:3.6-adoptopenjdk-11 as builder
 
 # Copy local code to the container image.
 WORKDIR /app
-COPY pom.xml .
+COPY flavorstack/pom.xml .
 COPY flavorstack/src ./src
 
 # Build a release artifact.
