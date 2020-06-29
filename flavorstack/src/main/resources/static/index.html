@@ -7,7 +7,7 @@
   <div id="my-signin2"></div>
   <script>
     function onSuccess(googleUser) {
-      
+      var id_token = googleUser.getAuthResponse().id_token;
       var xhr = new XMLHttpRequest();
       xhr.open('POST', '/authSuccess');
       xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
