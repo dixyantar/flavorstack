@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html>
 <head>
   <meta name="google-signin-client_id" content="70335511196-acnuatmjb07pbcftigiqfh2th7rk4o2c.apps.googleusercontent.com">
@@ -7,8 +7,14 @@
   <div id="my-signin2"></div>
   <script>
     function onSuccess(googleUser) {
-      console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
       
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', '/authSuccess');
+      xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+      xhr.onload = function() {
+        console.log('Signed in as: ' + xhr.responseText);
+      };
+      xhr.send('idtoken=' + id_token);
     }
     function onFailure(error) {
       console.log(error);
