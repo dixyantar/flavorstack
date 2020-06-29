@@ -28,10 +28,9 @@ public class BaseRestController {
 	public ResponseEntity<String> authSucess(@RequestParam String idtoken) throws Exception {
 		
 		if(gAuth.isVerified(idtoken)) {
-			new ResponseEntity<>("Work done on auth Success", HttpStatus.OK);
+			return new ResponseEntity<>("Work done on auth Success", HttpStatus.OK);
 		}else {
-			new ResponseEntity<>("Auth Unsuccessfull", HttpStatus.UNAUTHORIZED);
+			return new ResponseEntity<>("Auth Unsuccessfull", HttpStatus.UNAUTHORIZED);
 		}
-		return null;
 	}
 }
