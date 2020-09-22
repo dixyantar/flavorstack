@@ -1,4 +1,4 @@
-package com.flavorstack.app;
+package com.flavorstack.app.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
 import com.flavorstack.app.auth.GoogleAuth;
 
 @RestController
-public class BaseRestController {
+public class AuthController {
 
 	private GoogleAuth gAuth;
 
-	public BaseRestController() throws Exception {
+	public AuthController() throws Exception {
 		gAuth = new GoogleAuth();
 	}
 

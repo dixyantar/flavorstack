@@ -30,7 +30,7 @@ public class GoogleAuth {
 
 		  // Print user identifier
 		  String userId = payload.getSubject();
-		  System.out.println("User ID: " + userId);
+		  System.out.println(payload.toPrettyString() );
 
 		  // Get profile information from payload
 		  String email = payload.getEmail();
@@ -41,7 +41,7 @@ public class GoogleAuth {
 		  String familyName = (String) payload.get("family_name");
 		  String givenName = (String) payload.get("given_name");
 
-		  System.out.println(email);
+		  
 		  isVerified = true;
 
 		} 
